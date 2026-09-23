@@ -23,11 +23,11 @@ an end user received a phishing email that, once interacted with, triggered a ch
 
 <h2>Investigation Methodology</h2>
 
-1. Ticket Intake
+1\. Ticket Intake
 
 - received the alert/ticket for review and began triage in the case management workflow.
 
-2. Event Triage (Splunk)
+2\. Event Triage (Splunk)
 for the flagged event, i pulled the following data points to establish context around the activity:
 
 - affected host - the system where the activity occurred.
@@ -36,12 +36,12 @@ for the flagged event, i pulled the following data points to establish context a
 - command executed - the full command line for the flagged process.
 - execution location - where on the host/network the command ran.
 
-3. Timeline Construction
+3\. Timeline Construction
 
 - chained the individual events (initial email interaction > process execution > follow-on activity) into a single timeline using the host/user/pid-ppid relationships identified above.
 - the timeline was used to establish whether the chain of events, taken together, indicated a genuine compromise versus benign/false-positive activity.
 
-4. Reporting (5W Format)
+4\. Reporting (5W Format)
 documented findings in a structured report answering:
 
 - Who - user/account and host involved.
@@ -50,7 +50,7 @@ documented findings in a structured report answering:
 - Where - host, process location, any nay external destinations involved.
 - Why - likely intent/impact of the activity (ex. credential theft, data exfiltration)
 
-5. Remediation & Actionable Recommendations
+5\. Remediation & Actionable Recommendations
 
 - isolate the affected host from the network.
 - block the malicious domain/ip.
